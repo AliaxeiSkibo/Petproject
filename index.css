@@ -7,6 +7,7 @@
     --blue: #4985FF;
     --lightgray: #A1A1A1;
     --purple: #5b49ff9a;
+    --black: #000000;
 }
 
 *{
@@ -63,8 +64,19 @@ header nav{
 
 .navigation li:hover {
     border-bottom: 2px solid var(--white);
-
 }
+
+.burgerMenu {
+    display: none;
+}
+
+.burgerItem {
+    width: 30px;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
 .MainInfo{
     padding-top: 220px;
     display: flex;
@@ -227,6 +239,30 @@ p.studio{
     padding: 70px 0;
 }
 
+.ourProjectsElement{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.ourProjectTitle{
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.projectText{
+    font-weight: 400;
+    font-size: 36px;
+    margin-left: 20px;
+}
+
+.OurProjectMain{
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--gray);
+}
+
 .projects {
     width: 100%;
     display: flex;
@@ -272,6 +308,7 @@ p.studio{
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
+    color: var(--black);
 }
 
 .stepOneRandomText{
@@ -457,3 +494,37 @@ footer{
     color: var(--gray);
     margin-top: 30px;
 }
+
+@media (max-width: 720px) {
+    .navigation {
+        display: none;
+    }
+
+    header nav{
+        display: flex;
+        justify-content: end;
+        padding-right: 50px;
+    }
+
+    .burgerMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .burgerMenu:hover {
+        cursor: pointer;
+    }
+
+    .MainInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
